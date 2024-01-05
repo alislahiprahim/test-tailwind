@@ -1,4 +1,4 @@
-<header>
+<header class="fixed z-20">
     <nav class="py-2 bg-white shadow-md">
         <div class="flex flex-wrap justify-between items-center w-screen px-10">
             <ul class="hidden sm:flex gap-5 ">
@@ -36,7 +36,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
           </svg>
-                <div class="cart flex items-center gap-1">
+                <div class="cart flex items-center gap-1" (click)="toggleCart = !toggleCart">
                     <span>cart</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
@@ -51,7 +51,10 @@
                     <a>Home</a>
                 </li>
                 <li class="dropdown font-semibold hover:bg-black hover:text-white block rounded-md px-3 py-2 text-base ">
-                    <a>Menu </a>
+                    <a class="flex items-center gap-2">Menu <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
                     <ul class="dropdown-list hidden top-6 p-2 z-10 rounded-md shadow-md ">
                         <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> appetizers</a></li>
                         <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> entrees</a></li>
@@ -68,3 +71,146 @@
         </div>
     </nav>
 </header>
+<main>
+
+    <section class="">
+        <div class="poster" [style.background-image]="'url('+'https://vantage-edibles.myshopify.com/cdn/shop/files/Shopify__food-theme-hero.jpg?v=1643304496&width=2000'+')'">
+            <div class="text-center z-10">
+                <h2 class="text-white font-bold text-5xl">OUR PLACE OR YOURS ?</h2>
+                <p class="text-white text-1xl my-3">Take out, delivery or dine in now available</p>
+                <button class="bg-black text-white rounded-md font-normal px-7 py-3 ">let`s eat</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sm:container sm:mx-auto px-5 sm:px-20  text-center">
+        <h1 class="font-bold text-3xl my-8">DELICIOUS APPETIZERS</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-2 gap-7">
+            <div class="group relative">
+                <img src="https://vantage-edibles.myshopify.com/cdn/shop/products/nachos.jpg?v=1586117495&width=600" alt="">
+                <div>
+                    <h6 class="font-light text-base capitalize my-2 mb-1">nachos</h6>
+                    <span class="font-light text-base">from $8.10</span>
+                </div>
+                <div class="absolute invisible right-2 bottom-16 transition-all ease-in group-hover:visible group-hover:bottom-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#eee" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+                </div>
+            </div>
+            <div class="group relative">
+                <img src="https://vantage-edibles.myshopify.com/cdn/shop/products/Calamares.jpg?v=1586117458&width=600" alt="">
+                <div>
+                    <h6 class="font-light text-base capitalize my-2 mb-1">nachos</h6>
+                    <span class="font-light text-base">from $8.10</span>
+                </div>
+                <div class="absolute invisible right-2 bottom-16 transition-all ease-in group-hover:visible group-hover:bottom-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#eee" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+                </div>
+            </div>
+            <div class="group relative">
+                <img src="https://vantage-edibles.myshopify.com/cdn/shop/products/buffalo-wings.jpg?v=1586117441&width=600" alt="">
+                <div>
+                    <h6 class="font-light text-base capitalize my-2 mb-1">nachos</h6>
+                    <span class="font-light text-base">from $8.10</span>
+                </div>
+                <div class="absolute invisible right-2 bottom-16 transition-all ease-in group-hover:visible group-hover:bottom-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#eee" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+                </div>
+            </div>
+            <div class="group relative">
+                <img src="https://vantage-edibles.myshopify.com/cdn/shop/products/Chorizo.jpg?v=1586117475&width=600" alt="">
+                <div>
+                    <h6 class="font-light text-base capitalize my-2 mb-1">nachos</h6>
+                    <span class="font-light text-base">from $8.10</span>
+                </div>
+                <div class="absolute invisible right-2 bottom-16 transition-all ease-in group-hover:visible group-hover:bottom-20">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#eee" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sm:container sm:mx-auto px-5 sm:px-20 text-center mt-10">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-7">
+            <div class="relative">
+                <img src="https://vantage-edibles.myshopify.com/cdn/shop/files/nachos.jpg?v=1613627770&width=600" alt="">
+                <div class="absolute w-full h-full grid place-items-center top-0">
+                    <h1 class="text-white font-bold text-4xl md:text-3xl "> APPETIZERS</h1>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://vantage-edibles.myshopify.com/cdn/shop/files/burrito.jpg?v=1613627769&width=600" alt="">
+                <div class="absolute w-full h-full grid place-items-center top-0">
+                    <h1 class="text-white font-bold text-4xl md:text-3xl ">ENTREES</h1>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://vantage-edibles.myshopify.com/cdn/shop/files/tortillas.jpg?v=1613627770&width=600" alt="">
+                <div class="absolute w-full h-full grid place-items-center top-0">
+                    <h1 class="text-white font-bold text-4xl md:text-3xl "> SIDES</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sm:container sm:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-7 px-5 sm:px-20  text-center mt-10">
+        <div class="h-full w-full bg-red-600 grid place-items-center">
+            <div class="text-center py-10 lg:py-0">
+                <span class="my-1 font-light font-1xl">– FREE 20 MINUTE DELIVERY –</span>
+                <h1 class="mb-4 font-bold text-5xl">NIGHT IN?</h1>
+                <p class="w-72 sm:w-96 mb-2 font-light font-1xl">Let us take care of the cooking! Order from our take-out and delivery menu and we will have it ready in 20 minutes.</p>
+                <button class="bg-black text-white rounded-md font-normal px-7 py-3 ">Order online</button>
+            </div>
+        </div>
+        <div class="lg:w-full md:w-6/12 w-full">
+            <img src="https://vantage-edibles.myshopify.com/cdn/shop/files/fajitas.jpg?v=1613627770&width=800" alt="">
+        </div>
+    </section>
+
+    <section class="section-img">
+    </section>
+
+</main>
+<footer class="px-5 sm:px-20 py-10 bg-red-600">
+    <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <div class="max-w-48">
+            <img src="https://vantage-edibles.myshopify.com/cdn/shop/files/napkin-mockup-on-a-small-wooden-board-at-a-restaurant-a14749.png?v=1631637910&width=1920" alt="">
+        </div>
+        <div>
+            <h2 class="text-1xl font-bold uppercase mb-2">about</h2>
+            <p>Since 2001 Cantina has been serving authentic Mexican cuisine to folks in the Orlando, FL area. </p>
+        </div>
+        <div>
+            <h2 class="text-1xl font-bold uppercase mb-2">QUICK LINKS</h2>
+            <div class="grid grid-cols-1">
+                <a href="" class="capitalize">home</a>
+                <a href="" class="capitalize">menu</a>
+                <a href="" class="capitalize">gear</a>
+                <a href="" class="capitalize">news</a>
+            </div>
+        </div>
+        <div>
+            <h2 class="text-1xl font-bold uppercase mb-2">join us</h2>
+            <p class="mb-2">Join our email list for the latest news, updates and special event info.</p>
+            <input type="email" class="border w-full border-black rounded-cm bg-transparent px-2 py-3 placeholder:text-black" placeholder="email address">
+        </div>
+    </div>
+    <div class="sm:flex items-start sm:items-end justify-start sm:justify-between my-10">
+        <p class="mb-2">© 2024 Vantage - Bright • Powered by A.salah</p>
+        <button class="bg-transparent border border-black rounded-md font-normal px-7 py-3">Egypt (USD $)</button>
+    </div>
+</footer>
+
+<app-sidebar [isOpen]="toggleCart">
+    <div sidebarContent>
+        asdas
+    </div>
+</app-sidebar>

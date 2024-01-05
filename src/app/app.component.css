@@ -1,0 +1,25 @@
+.poster {
+    position: relative;
+    height: 92vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000053;
+    }
+}
+
+.section-img {
+    height: 400px;
+    background-image: url('https://vantage-edibles.myshopify.com/cdn/shop/files/napkin-mockup-on-a-small-wooden-board-at-a-restaurant-a14749.png?v=1631637910&width=1920');
+    background-position: center;
+    background-size: cover;
+    margin-top: 66px;
+}
