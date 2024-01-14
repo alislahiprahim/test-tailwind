@@ -1,0 +1,14 @@
+<div class="sm:container sm:mx-auto px-5 sm:px-20 mt-5 flex flex-col md:flex-row gap-4">
+  <div class="w-full md:w-3/4 order-2 md:order-1">
+    <div class="grid col-1 gap-4">
+      @for (item of items; track $index) {
+        <menu-item></menu-item>
+      }
+    </div>
+  </div>
+  <div class="w-full md:w-1/4 order-1">
+    <div class="">
+      sidebar content
+    </div>
+  </div>
+</div>
