@@ -1,0 +1,96 @@
+<header class="fixed top-0 z-20">
+  <nav class="py-2 bg-white shadow-md">
+    <div class="flex flex-wrap justify-between items-center w-screen px-10">
+      <ul class="hidden sm:flex gap-5 ">
+        <li
+          class="font-semibold relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:top-8 after:left-0 after:transition-all after:duration-300 hover:after:w-full">
+          <a class="text-black no-underline" routerLink="">Home</a>
+        </li>
+        <li
+          class="group font-semibold relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:top-8 after:left-0 after:transition-all after:duration-300 hover:after:w-full">
+          <a class="text-black no-underline flex items-center" routerLink="menu">Menu <svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd"
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+
+          </a>
+          <ul class="absolute top-6 p-2 bg-white z-10 rounded-md shadow-md invisible  group-hover:visible">
+            <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> appetizers</a></li>
+            <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> entrees</a></li>
+            <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> sides</a></li>
+          </ul>
+        </li>
+        <li
+          class="font-semibold relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:top-8 after:left-0 after:transition-all after:duration-300 hover:after:w-full">
+          <a class="text-black no-underline">Gear</a>
+        </li>
+        <li
+          class="font-semibold relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-black after:top-8 after:left-0 after:transition-all after:duration-300 hover:after:w-full">
+          <a class="text-black no-underline">News</a>
+        </li>
+      </ul>
+      <button class="sm:hidden" (click)="mobileMenu = !mobileMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 ">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+        </svg>
+      </button>
+      <a>
+        <img class="max-w-32 sm:max-w-48"
+          src="https://vantage-edibles.myshopify.com/cdn/shop/files/logo_3dc0e7a6-e4ba-41bc-80ef-27d162199258.jpg?v=1613627769&width=600"
+          alt="logo">
+      </a>
+      <div class="tools flex gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+        <div class="cart flex items-center gap-1" (click)="toggleCart = !toggleCart">
+          <span>cart</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          <span class="bg-black text-white px-2 rounded-md">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="px-10" [class.hidden]="!mobileMenu" [class.block]="mobileMenu">
+      <ul class="gap-5 ">
+        <li class="font-semibold relative hover:bg-black hover:text-white block rounded-md px-3 py-2 text-base ">
+          <a>Home</a>
+        </li>
+        <li class="dropdown font-semibold hover:bg-black hover:text-white block rounded-md px-3 py-2 text-base ">
+          <a class="flex items-center gap-2">Menu <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd"
+                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <ul class="dropdown-list hidden top-6 p-2 z-10 rounded-md shadow-md ">
+            <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> appetizers</a></li>
+            <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> entrees</a></li>
+            <li class="pl-2 pr-16"> <a class="hover:underline font-light capitalize"> sides</a></li>
+          </ul>
+        </li>
+        <li class="font-semibold relative hover:bg-black hover:text-white block rounded-md px-3 py-2 text-base ">
+          <a>Gear</a>
+        </li>
+        <li class="font-semibold relative hover:bg-black hover:text-white block rounded-md px-3 py-2 text-base ">
+          <a>News</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<app-sidebar [isOpen]="toggleCart">
+  <div sidebarContent>
+    asdas
+  </div>
+</app-sidebar>

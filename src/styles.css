@@ -3,3 +3,16 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.slide-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    overflow-y: auto;
+}
+
+.slide-content.open {
+    height: auto;
+    max-height: 400px;
+    /* Adjust the height as needed */
+}

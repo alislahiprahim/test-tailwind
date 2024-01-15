@@ -1,12 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'menu-item',
   standalone: true,
-  imports: [],
-  templateUrl:'./menu-item.component.html',
+  imports: [NgIf],
+  templateUrl: './menu-item.component.html',
   styleUrl: './menu-item.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MenuItemComponent { }
+export class MenuItemComponent {
+  @Input() noContent: boolean = false;
+  @Input() noShadow: boolean = false;
+}
